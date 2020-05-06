@@ -28,6 +28,28 @@ h1 {
   }
 }
 
+.formContainer {
+  min-height:62vh;
+}
+
+#list {
+  display: flex;
+  flex-direction: column;
+  height: 180px;
+  overflow-y: scroll;
+}
+
+#comments {
+  display: flex;
+  flex-direction: column-reverse;
+  flex-grow: 1;
+  margin-top: 0;
+}
+
+#comments li {
+  flex: 1;
+}
+
 ul {
   list-style: none;
   padding: 0;

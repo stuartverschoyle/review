@@ -32,13 +32,24 @@ export class UserForm extends Component {
           .ref("/reviews")
           .push()
           .set(this.state);
-        console.log("DATA SAVED");
+          console.log("DATA SAVED");
 
-        this.setState({
-            step: 1
-        });
+          this.setState({
+              step: 3
+          });          
+
       };
     
+    clearform = () => {
+        this.setState({
+            step: 1,
+            firstName: '',
+            lastName: '',
+            email: '',
+            rating: "0",
+            comment: '',
+        });
+    }
 
     // go to next step
     nextStep = () => {
@@ -65,7 +76,6 @@ export class UserForm extends Component {
         const { step, firstName, lastName, email, rating, comment } = this.state;
         const values = { step, firstName, lastName, email, rating, comment };
         
-        // eslint-disable-next-line default-case
         switch(step){
             case 1:
                 return(
@@ -75,8 +85,8 @@ export class UserForm extends Component {
                             handleChange = {this.handleChange}
                             values = {values}
                         />
-                    </>
-                )
+                     </>
+                )            
             case 2:
                 return(
                     <>
@@ -86,17 +96,19 @@ export class UserForm extends Component {
                             writeUserData = {this.writeUserData}
                             values = {values}                    
                         />     
+                           
                     </>                           
                 )
-            case 3:
-                return(
-                    <>
-                        <Success
-                            values = {values}                    
-                        />
-                    </>                          
-                )
-                                       
+                case 3:
+                    return(
+                        <>
+                            <Success
+                                values = {values} 
+                                clearForm = {this.clearform}
+                            />                                                                          
+                        </>                          
+                    )                    
+            default:                                       
         }
     }
 }

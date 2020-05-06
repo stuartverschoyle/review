@@ -25,9 +25,9 @@ export class ConfirmUserDetails extends Component {
                     <AppBar title="Confirm Details" />       
                     <List>
                         <ListItem 
-                                primaryText="First Name"
-                                secondaryText={firstName}
-                            />
+                            primaryText="First Name"
+                            secondaryText={firstName}
+                        />
                         <ListItem 
                             primaryText="Last Name"
                             secondaryText={lastName}

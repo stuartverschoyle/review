@@ -4,12 +4,13 @@ import firebase from 'firebase'
 export class Comments extends Component {
     componentDidMount() {
         this.getUserData();
-    }  
+    }
+      
 
     getUserData = () => {
         let ref = firebase.database().ref("/reviews");
 
-          ref.on("value", snapshot => {
+          ref.once("value", snapshot => {
 
             ref.on("child_added", function(data, prevChildKey) {
                 var comment = data.val();
@@ -33,7 +34,9 @@ export class Comments extends Component {
         return (
             <div>
                 <h1>Latest Comments</h1>
-                <ul id="comments" className="commentsContainer"></ul>
+                <div id="list">
+                    <ul id="comments" className="commentsContainer"></ul>
+                </div>
             </div>
         )
     }

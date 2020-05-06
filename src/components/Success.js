@@ -8,8 +8,7 @@ export class Success extends Component {
 
     home = e => {
         e.preventDefault();
-        //process form
-        document.location.href="/";
+        this.props.clearForm();
     } 
 
     render() {
