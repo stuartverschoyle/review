@@ -57,7 +57,9 @@ export class ConfirmUserDetails extends Component {
                         primary={false}
                         style = {styles.button}
                         onClick={this.back}
-                    />                                                          
+                    />   
+                    <br />
+                                                       
                 </>
             </MuiThemeProvider>
         )

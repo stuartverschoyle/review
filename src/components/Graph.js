@@ -42,6 +42,7 @@ export class Graph extends Component {
                 data_list.push(childData);
                 
 
+
                 if(comment.rating === "5"){
                     ratings5 += 1
                 } else if(comment.rating === "4"){
@@ -74,7 +75,8 @@ export class Graph extends Component {
                 ratings3: ratings3,
                 ratings2: ratings2,
                 ratings1: ratings1,
-            })             
+            })   
+            
 
         });
 
@@ -82,6 +84,7 @@ export class Graph extends Component {
 
       render() {
         const {dataList,average,ratings1,ratings2,ratings3,ratings4,ratings5} = this.state;
+        console.log(this.state)
         var percent1 = Math.round((ratings1 / dataList) * 100);
         var percent2 = Math.round((ratings2 / dataList) * 100);
         var percent3 = Math.round((ratings3 / dataList) * 100);
