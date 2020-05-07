@@ -60,7 +60,7 @@ export class FormUserDetails extends Component {
             <MuiThemeProvider>
                 <>
                     <AppBar title="Checkout.com Rating" />
-                    <form name="myForm" validate>
+                    <form name="myForm" className="userForm" validate>
                         <TextField
                             hintText="enter your first name"
                             floatingLabelText="First Name"
@@ -101,7 +101,6 @@ export class FormUserDetails extends Component {
                             multiline="true"
                             rows={4}
                             defaultValue={values.comment}
-                            variant="outlined"
                             floatingLabelText="Comment"
                             hintText="enter your comment"
                             onChange={handleChange('comment')}

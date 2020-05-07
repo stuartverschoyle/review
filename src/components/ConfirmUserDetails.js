@@ -32,7 +32,7 @@ export class ConfirmUserDetails extends Component {
             <MuiThemeProvider>
                 <>
                     <AppBar title="Confirm Details" />       
-                    <List>
+                    <List className="userForm">
                         <ListItem 
                             primaryText="First Name"
                             secondaryText={firstName}
