@@ -3,6 +3,12 @@ import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider'
 import AppBar from 'material-ui/AppBar'
 import RaisedButton from 'material-ui/RaisedButton'
 
+//****************************************************************
+//
+// Success.js thanks the user with a personalised note and 
+// experience review - different responses depending on result
+//
+//****************************************************************
 
 export class Success extends Component {
 

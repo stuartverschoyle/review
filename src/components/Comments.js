@@ -1,6 +1,13 @@
 import React, { Component } from 'react'
 import firebase from 'firebase'
 
+//********************************************************
+//
+// Get the comments from the firebase database and append 
+// them to the comments div#comments
+//
+//********************************************************
+
 export class Comments extends Component {
     componentDidMount() {
         this.getUserData();
@@ -28,7 +35,7 @@ export class Comments extends Component {
           });
   
 
-      };    
+    };    
 
     render() {
         return (

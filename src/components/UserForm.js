@@ -6,6 +6,12 @@ import Success from './Success'
 import firebase from 'firebase'
 import config from "./../config"
 
+//********************************************************
+//
+// UserForm.js is the steps to complete the form
+//
+//********************************************************
+
 export class UserForm extends Component {
 
     constructor(props) {
@@ -24,22 +30,23 @@ export class UserForm extends Component {
             comments: [],
         }        
         
-      }    
+    }    
     
-      writeUserData = () => {
+    // write the data from the form to the firebase database and go to final step
+    writeUserData = () => {
 
-        firebase.database()
-          .ref("/reviews")
-          .push()
-          .set(this.state);
-          console.log("DATA SAVED");
+    firebase.database()
+        .ref("/reviews")
+        .push()
+        .set(this.state);
 
-          this.setState({
-              step: 3
-          });          
+        this.setState({
+            step: 3
+        });          
 
-      };
-    
+    };
+
+    // clear form states
     clearform = () => {
         this.setState({
             step: 1,

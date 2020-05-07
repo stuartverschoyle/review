@@ -6,17 +6,22 @@ import Comments from './components/Comments';
 import Graph from './components/Graph';
 import RaisedButton from 'material-ui/RaisedButton';
 import SwipeableDrawer from '@material-ui/core/SwipeableDrawer';
-import Button from '@material-ui/core/Button';
+
+//******************************************************************
+//
+// App.js holds the three main components; FORM, COMMENTS and GRAPH
+// FORM & GRAPH are wrapped in a MUI Swipeable drawer component
+//
+//******************************************************************
 
 function App() {
 
+  //set drawer state
   const [state, setState] = React.useState({
-    top: false,
     left: false,
-    bottom: false,
-    right: false,
   });
 
+  //toggle drawer
   const toggleDrawer = (anchor, open) => (event) => {
     if (event && event.type === 'keydown' && (event.key === 'Tab' || event.key === 'Shift')) {
       return;

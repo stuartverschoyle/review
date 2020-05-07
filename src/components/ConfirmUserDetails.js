@@ -4,14 +4,23 @@ import AppBar from 'material-ui/AppBar'
 import {List, ListItem} from 'material-ui/List'
 import RaisedButton from 'material-ui/RaisedButton'
 
+//********************************
+//
+// ConformUserDetails.js lists all the users inputs before continuing 
+// giving the user a chance to go back and edit fields if needs be
+//
+//********************************
 
 export class ConfirmUserDetails extends Component {
 
+
+    //process form from UserForm.js
     continue = e => {
         e.preventDefault();
-        //process form
         this.props.writeUserData();
     }
+
+    // back to previous step
     back = e => {
         e.preventDefault();
         this.props.prevStep();
