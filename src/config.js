@@ -1,5 +1,5 @@
 const config = {
-    apiKey: "AIzaSyAt8yKy9ROEoeUxZWYxPLxsAxUpupgyMMs",
+    apiKey: process.env.REACT_APP_GOOGLE_API_KEY,
     authDomain: "checkout-3daf4.firebaseapp.com",
     databaseURL: "https://checkout-3daf4.firebaseio.com",
     projectId: "checkout-3daf4",
