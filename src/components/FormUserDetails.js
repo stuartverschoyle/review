@@ -3,6 +3,7 @@ import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider'
 import AppBar from 'material-ui/AppBar'
 import TextField from 'material-ui/TextField'
 import Rating from '@material-ui/lab/Rating';
+import logo from '.././logo.svg'
 
 import RaisedButton from 'material-ui/RaisedButton'
 
@@ -55,11 +56,10 @@ export class FormUserDetails extends Component {
     render() {
         const { values, handleChange } = this.props;
         const {error, emailerror} = this.state;
-
         return (
             <MuiThemeProvider>
                 <>
-                    <AppBar title="Checkout.com Rating" />
+                    <AppBar className="logo" title={<img src={logo} alt="" />}/>
                     <form name="myForm" className="userForm" validate>
                         <TextField
                             hintText="enter your first name"
@@ -113,6 +113,7 @@ export class FormUserDetails extends Component {
                         primary={true}
                         style = {styles.button}
                         onClick={this.continue}
+                        className="checkout"
                     />       
                     <br />
                 </>
@@ -123,6 +124,7 @@ export class FormUserDetails extends Component {
 
 const styles = {
     button: {
+        backgroundColor:'#01B48F',
         margin: 15
     }
 }
