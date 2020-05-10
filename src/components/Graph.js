@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import firebase from 'firebase'
+import CountUp from 'react-countup';
 
 //****************************************************************
 //
@@ -99,14 +100,14 @@ export class Graph extends Component {
         return (
             <div>
                 <h1>Latest Ratings</h1>
-                <h3>Average: {average} stars</h3>
+                <h3>Average: <CountUp decimals={2} end={average} /> stars </h3>
 
                 <ul className="graph">
-                    <li><span className="position">5</span>{ratings5 ? <span style={{"height" : "100%", "width" : percent5+"%"}}>{percent5+"%"}</span> : null}</li>
-                    <li><span className="position">4</span>{ratings4 ? <span style={{"height" : "100%", "width" : percent4+"%"}}>{percent4+"%"}</span> : null}</li>
-                    <li><span className="position">3</span>{ratings3 ? <span style={{"height" : "100%", "width" : percent3+"%"}}>{percent3+"%"}</span> : null}</li>
-                    <li><span className="position">2</span>{ratings2 ? <span style={{"height" : "100%", "width" : percent2+"%"}}>{percent2+"%"}</span> : null}</li>
-                    <li><span className="position">1</span>{ratings1 ? <span style={{"height" : "100%", "width" : percent1+"%"}}>{percent1+"%"}</span> : null}</li>
+                <li><span className="position">5</span>{ratings5 ? <div style={{"width": percent5+"%"}}><span className="count" style={{"height" : "100%"}}><CountUp end={percent5} suffix="%" /></span></div> : null}</li>
+                <li><span className="position">4</span>{ratings4 ? <div style={{"width": percent4+"%"}}><span className="count" style={{"height" : "100%"}}><CountUp end={percent4} suffix="%" /></span></div> : null}</li>
+                <li><span className="position">3</span>{ratings3 ? <div style={{"width": percent3+"%"}}><span className="count" style={{"height" : "100%"}}><CountUp end={percent3} suffix="%" /></span></div> : null}</li>
+                <li><span className="position">2</span>{ratings2 ? <div style={{"width": percent2+"%"}}><span className="count" style={{"height" : "100%"}}><CountUp end={percent2} suffix="%" /></span></div> : null}</li>
+                <li><span className="position">1</span>{ratings1 ? <div style={{"width": percent1+"%"}}><span className="count" style={{"height" : "100%"}}><CountUp end={percent1} suffix="%" /></span></div> : null}</li>
                 </ul>
             </div>
         )
