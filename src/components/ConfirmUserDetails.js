@@ -3,6 +3,7 @@ import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider'
 import AppBar from 'material-ui/AppBar'
 import {List, ListItem} from 'material-ui/List'
 import RaisedButton from 'material-ui/RaisedButton'
+import logo from '.././logo.svg'
 
 //********************************
 //
@@ -31,7 +32,8 @@ export class ConfirmUserDetails extends Component {
         return (
             <MuiThemeProvider>
                 <>
-                    <AppBar title="Confirm Details" />       
+                    <AppBar className="logo" title={<img src={logo} alt="" />}/>
+                    <h1>Confirm Details</h1>
                     <List className="userForm">
                         <ListItem 
                             primaryText="First Name"
@@ -60,6 +62,7 @@ export class ConfirmUserDetails extends Component {
                         primary={true}
                         style = {styles.button}
                         onClick={this.continue}
+                        className="checkout"
                     /> 
                     <RaisedButton 
                         label="Back"

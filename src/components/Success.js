@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider'
 import AppBar from 'material-ui/AppBar'
 import RaisedButton from 'material-ui/RaisedButton'
+import logo from '.././logo.svg'
 
 //****************************************************************
 //
@@ -26,13 +27,14 @@ export class Success extends Component {
         return (
             <MuiThemeProvider>
                 <>
-                    <AppBar title="Success" />       
+                    <AppBar className="logo" title={<img src={logo} alt="" />}/>
                     <h1>Thank you {firstName} for your submission</h1>
                     <p>{review}</p>        
                     <RaisedButton 
                         label="Back"
                         primary={true}
                         onClick={this.home}
+                        className="checkout"
                     />  
                     <br />
                 </>

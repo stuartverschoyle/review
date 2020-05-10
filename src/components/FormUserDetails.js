@@ -60,6 +60,7 @@ export class FormUserDetails extends Component {
             <MuiThemeProvider>
                 <>
                     <AppBar className="logo" title={<img src={logo} alt="" />}/>
+                    <h1>Website Feedback</h1>
                     <form name="myForm" className="userForm" validate>
                         <TextField
                             hintText="enter your first name"
@@ -115,7 +116,6 @@ export class FormUserDetails extends Component {
                         onClick={this.continue}
                         className="checkout"
                     />       
-                    <br />
                 </>
             </MuiThemeProvider>
         )
